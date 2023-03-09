@@ -1,26 +1,22 @@
-# Debian
-FROM ruby:2.5.9-buster AS RUBY
+# docker build --progress=plain -t local/services_tools:latest .
+FROM ruby:2.5.9-buster
 
-RUN apt update && \
-    apt -y install \
-    wkhtmltopdf \
-    openssh-client \
-    r-base r-base-dev \
-    default-mysql-client \
-    git \
-    sudo
+RUN apt-get update -qq && \
+  apt-get install -y vim \
+    bash-completion \
+    expect
 
-# Install Node vs 16
-RUN curl -fsSL https://deb.nodesource.com/setup_16.x | bash - && \
+RUN curl -fsSL https://deb.nodesource.com/setup_14.x | bash - && \
   apt-get install -y nodejs
 
+COPY . /app
 
-COPY Gemfile* .
-RUN gem install bundler -v 1.17.3
-RUN bundle install
-COPY . .
-RUN npm i bower -g
-RUN cd vendor/assets && bower install --allow-root
+WORKDIR /app/
+RUN bundle
+RUN npm install bower -g && cd vendor/assets && bower install
 
-EXPOSE 3001
-CMD ["rails", "server", "-b", "0.0.0.0", "-p", "3001"]
+RUN echo "alias l='ls -alh'" >> ~/.bashrc
+
+EXPOSE 3010
+CMD ["rails", "server", "-b", "0.0.0.0", "-p", "3010"]
+

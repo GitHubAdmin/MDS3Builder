@@ -1,3 +1,8 @@
 log
 .nvmrc
 .rspec
+Makefile
+README.md
+Gemfile.lock
+.gitignore
+

@@ -7,32 +7,6 @@ Inactivations of corrections are not explicitly handled by this application. To 
 This is an open-source project created by Mike Doise and Phillip Doise at Providigm.LLC for testing purposes only.
 
 # Build Steps
-## Build local docker image
-```docker build --progress=plain -t hstm/mdsbuilder:0.1  .```
-## Start Docker Container
-```docker run --name MDS3Builder -d -p 3001:3001 hstm/mdsbuilder:0.1```
-## Open in browser
-```open localhost:3001```
-
-
-
-## --------- Old Build Steps ----------
-
-### Toolchain
-
-Ruby 2.5.1
-Node v10.14.2
-Bower 1.8.8
-
-
-## Local Setup
-
-npm install bower -g
-
-brew install postgresql
-
-bundle install
-
-cd vendor/assets
-
-bower install
+- `make img` will build your docker image
+- `make run` will start up the server on port 3010
+- `open localhost:3010` will open up the server in your browser
