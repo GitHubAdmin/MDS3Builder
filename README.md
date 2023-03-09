@@ -9,4 +9,4 @@ This is an open-source project created by Mike Doise and Phillip Doise at Provid
 # Build Steps
 - `make img` will build your docker image
 - `make run` will start up the server on port 3010
-- `open localhost:3010` will open up the server in your browser
+- `open http://localhost:3010` will open up the server in your browser
