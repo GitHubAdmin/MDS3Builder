@@ -12,8 +12,8 @@ img:         ## Build docker image
 # 	@docker push $(IMG_NAME):$(TAG)
 
 lbe:         ## Start container and connect to it
-	docker run -it --rm -P --entrypoint=/bin/bash $(IMG_NAME):$(TAG)
+	@docker run -it --rm -P --entrypoint=/bin/bash $(IMG_NAME):$(TAG)
 
 run:         ## Start running server
-	docker run -it --rm -p 3010:3010 $(IMG_NAME):$(TAG)
+	@docker run --volume ${PWD}/app:/app/app -it --rm -p 3010:3010 $(IMG_NAME):$(TAG)
 
