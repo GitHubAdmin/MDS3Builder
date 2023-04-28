@@ -14,9 +14,7 @@ class CorrectionOfEntry < Assessment
               
               E0200a E0800 E1000a 
               
-              G0110a1 G0110b1 G0110d1 G0110e1 G0110f1 G0110g1 G0110h1
-              
-              G0110i1 G0110j1 G0120a G0400a G0400b G0600b G0600c H0100a H0300 H0400 I0200 I0600 I1550 I1700 I2000 I2100 I2300
+              H0100a H0300 H0400 I0200 I0600 I1550 I1700 I2000 I2100 I2300
               
               I2500 I2900 I3700 I3800 I4200 I4500 I4800 I4900 I5100 I5400 I6200 I6300 
               
