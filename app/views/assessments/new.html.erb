@@ -20,7 +20,7 @@
             <% end %>
           <% end %>
           </select> 
-        <% elsif klass.field_type == RADIO %>
+        <% elsif klass.field_type == RADIO || klass.field_type == CHECKBOX %>
         <% have_selected = klass.options.detect{|o| o.selected } %>
           <div class="<%=input_type(klass.field_type)%>">
           <% klass.options.each do |option| %>
