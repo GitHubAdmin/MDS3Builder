@@ -2,7 +2,7 @@ class GG0110a
   attr_reader :options, :name, :field_type, :node
 
   def initialize
-    @name = "Prior Device Use: Manual Wheelchair. Used by the resident prior to the current illness, exacerbation, or injury? (GG0110a)"
+    @name = "Prior Device Use: Manual Wheelchair - Used by the resident prior to the current illness, exacerbation, or injury? (GG0110a)"
     @field_type = DROPDOWN
     @node = "GG0110A" 
 

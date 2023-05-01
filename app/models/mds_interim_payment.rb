@@ -23,7 +23,8 @@ class MdsInterimPayment < Assessment
               
               E0100a E0100b E0200a E0200b E0200c E0800 E0900 
               
-              GG0130a5 GG0130b5 GG0130c5 GG0170b5 GG0170c5 GG0170d5 GG0170e5 GG0170f5 GG0170i5 GG0170j5 GG0170k5
+              GG0130a5 GG0130b5 GG0130c5 
+              GG0170b5 GG0170c5 GG0170d5 GG0170e5 GG0170f5 GG0170i5 GG0170j5 GG0170k5
               
               H0100c_title H0100d H0200c H0500
 

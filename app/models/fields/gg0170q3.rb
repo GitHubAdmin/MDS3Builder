@@ -8,7 +8,7 @@ class GG0170q3
 
     @options = []
     @options << FieldOption.new("^", "NA")
-    @options << FieldOption.new("0", "No Skip to GG0130, Self Care (Discharge).")
+    @options << FieldOption.new("0", "No Skip to H0100, Appliances")
     @options << FieldOption.new("1", "Yes. Continue to GG0170R, Wheel 50 feet with two turns")
   end
 
