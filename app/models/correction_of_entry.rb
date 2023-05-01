@@ -29,7 +29,7 @@ class CorrectionOfEntry < Assessment
               
               N0450a N0450b N0450c N0450d N0450e 
               
-              O0100a1 O0100b1 O0100c2 O0100f2 O0100g2 O0100h2 O0100i2 O0100j1 O0250a O0300a 
+              O0250a O0300a 
               O0400b4 O0400c4 
               
               P0100b P0100c P0100d P0100e P0100f P0100g P0200a P0200b P0200c P0200d P0200e P0200f 

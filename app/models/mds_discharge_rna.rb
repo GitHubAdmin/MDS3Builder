@@ -24,7 +24,9 @@ class MdsDischargeRna < Assessment
               L0200a L0200b L0200c L0200d L0200e L0200f L0200g 
               M0100a M0100b M0100c M0210 M0300a1 M0300b1 M0300b2 M0300c1 M0300c2 M0300d1 M0300d2 M0300e1 M0300e2 M0300f1 M0300f2 M0300g1 M0300g2 
               N2005
-              O0100k2 O0250a O0300a O0400b4 O0400c4
+              
+              O0250a O0300a O0400b4 O0400c4
+              
               P0100a P0100b P0100c P0100d P0100e P0100f P0100g P0100h 
               X0600h_title )
   end

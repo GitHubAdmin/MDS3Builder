@@ -35,7 +35,7 @@ class CorrectionOfDischargeRa < Assessment
               
               N2005
               
-              O0100k2 O0250a O0300a O0400b4 O0400c4
+              O0250a O0300a O0400b4 O0400c4
               
               P0100a P0100b P0100c P0100d P0100e P0100f P0100g P0100h 
               
