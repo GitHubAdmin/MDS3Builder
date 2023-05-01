@@ -27,8 +27,7 @@ class CorrectionOfEntry < Assessment
               M0210_title M0300a1 M0300b1 M0300b2 M0300c1 M0300c2
               M0300d1 M0300d2 M0300e1 M0300e2 M0300f1 M0300f2 M0300g1 M0300g2 
               
-              N0410a_title N0410b N0410c N0410d N0410e
-              N0410f N0410g N0410h N0450a N0450b N0450c N0450d N0450e 
+              N0450a N0450b N0450c N0450d N0450e 
               
               O0100a1 O0100b1 O0100c2 O0100f2 O0100g2 O0100h2 O0100i2 O0100j1 O0250a O0300a 
               O0400b4 O0400c4 
