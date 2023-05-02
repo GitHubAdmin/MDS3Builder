@@ -33,7 +33,7 @@ class CorrectionOfDischargeRa < Assessment
               
               M0100a M0100b M0100c M0210 M0300a1 M0300b1 M0300b2 M0300c1 M0300c2 M0300d1 M0300d2 M0300e1 M0300e2 M0300f1 M0300f2 M0300g1 M0300g2 
               
-              N2005
+              N0400a_title N0400b N0400c N0400d N0400e N0400f N0400g N0400h N0400i N0400j N2005
               
               O0250a O0300a O0400b4 O0400c4
               

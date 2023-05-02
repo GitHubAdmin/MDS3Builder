@@ -10,7 +10,7 @@ module Qps::AttributeSetter
               # TODO: These "G" fields are deleted in v1.18, do we need to replace with something else here? 
               # "G0110A1", "G0110B1", "G0110D1", "G0110E1", "G0110F1", "G0110G1", "G0110H1", "G0110I1", "G0110J1", "G0120A","G0400A", "G0400B", "G0600B", "G0600C", 
               "H0100A", "H0300", "H0400", "I2300", "I2500", "J1550C", "K0300", "K0510B2", "L0200A", 
-              "L0200B", "L0200C", "L0200D", "L0200E", "L0200F", "L0200G", "M0210", 
+              "L0200B", "L0200C", "L0200D", "L0200E", "L0200F", "L0200G", "M0210", "N0400A", "N0400B", "N0400C", "N0400D", "N0400E", "N0400F", "N0400G", "N0400H", "N0400I", "N0400J",
               "O0400B4", "O0400C4", "P0100B", "P0100C", "P0100D", "P0100E", "P0100F", "P0100G",]
   end
 
