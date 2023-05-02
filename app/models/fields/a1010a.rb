@@ -8,7 +8,7 @@ class A1010a
 
     @options = []
     @options << FieldOption.new("0")
-    @options << FieldOption.new("1", "True")
+    @options << FieldOption.new("1", "Race: White (A1010a)")
 end
 
   def set_values_for_type(klass)
