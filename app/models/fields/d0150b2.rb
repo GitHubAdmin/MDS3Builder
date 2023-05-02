@@ -1,10 +1,10 @@
-class D0200i2
+class D0150b2 
   attr_reader :options, :name, :field_type, :node
 
   def initialize
-    @name = "Resident Mood Interview: Over last two weeks, how often has resident reported thoughts that they would be better off dead, or of hurting him/herself in some way? (D0200i2)"
+    @name = "Resident Mood Interview: Over last two weeks, how often has resident reported feeling down, depressed, or hopeless? (D0150b2)"
     @field_type = DROPDOWN
-    @node = "D0200I2" 
+    @node = "D0150B2" 
 
     @options = []
     @options << FieldOption.new("^", "NA")
