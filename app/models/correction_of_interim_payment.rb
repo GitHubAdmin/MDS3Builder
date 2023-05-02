@@ -38,8 +38,8 @@ class CorrectionOfInterimPayment < Assessment
               
         N0350a_title N0350b 
               
-        O0400d2 
-        O0500a O0500b O0500c O0500d O0500e O0500f O0500g O0500h O0500i O0500j
+        O0110a1b O0110b1b O0110c1b O0110d1b O0110e1b O0110f1b O0110h1b O0110i1b O0110j1b O0110m1b
+        O0400d2 O0500a O0500b O0500c O0500d O0500e O0500f O0500g O0500h O0500i O0500j
               
         X0150 X0200a X0200c X0300 X0400 X0500 X0600a X0600b X0700a_ipa 
     )

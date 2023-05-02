@@ -1,8 +1,7 @@
 class N0450a
-  attr_reader :title, :options, :name, :field_type, :node
+  attr_reader :options, :name, :field_type, :node
 
   def initialize
-    @title = "Section N: Medications"
     @name = "Resident received antipsychotic medications (N0450a)"
     @field_type = DROPDOWN
     @node = "N0450A"     

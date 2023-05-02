@@ -1,8 +1,7 @@
 class N2005
-  attr_reader :title, :options, :name, :field_type, :node
+  attr_reader :options, :name, :field_type, :node
 
   def initialize
-    @title = "Section N: Medications"
     @name = "Medication Intervention: Did the facility contact and complete physician (or physician-designee) prescribed/recommended actions by midnight of the next calendar day each time potnetial clinically significant medication issues were identified since the admission? (N2005)"
     @field_type = RADIO
     @node = "N2005" 
