@@ -11,7 +11,7 @@ class ItmSetVrsnCd
   end
 
   def set_values_for_type(klass)
-    return "1.17"
+    return "1.17.2"
   end
 
 end
