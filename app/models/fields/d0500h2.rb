@@ -2,7 +2,7 @@ class D0500h2
   attr_reader :options, :name, :field_type, :node
 
   def initialize
-    @name = "Staff Assessment of Resident Mood: Over last two weeks, how often has resident been moving or speaking so slowly that other people have noticed? Or the opposite - been so fidgety or restless that s/he has been moving around a lot more than usual? (D0500h2)"
+    @name = "Staff Assessment of Resident Mood: Over last two weeks, how often has resident been moving or speaking so slowly that other people have noticed? Or the opposite - been so fidgety or restless that they have been moving around a lot more than usual? (D0500h2)"
     @field_type = DROPDOWN
     @node = "D0500H2" 
 
