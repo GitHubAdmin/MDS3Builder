@@ -7,7 +7,6 @@ class GG0110a
     @node = "GG0110A" 
 
     @options = []
-    @options = []
     @options << FieldOption.new("0")
     @options << FieldOption.new("1", "True")
   end
