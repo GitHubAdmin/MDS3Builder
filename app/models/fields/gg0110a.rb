@@ -3,18 +3,18 @@ class GG0110a
 
   def initialize
     @name = "Prior Device Use: Manual Wheelchair - Used by the resident prior to the current illness, exacerbation, or injury? (GG0110a)"
-    @field_type = DROPDOWN
+    @field_type = CHECKBOX
     @node = "GG0110A" 
 
     @options = []
-    @options << FieldOption.new("^", "NA")
-    @options << FieldOption.new("0", "No")
-    @options << FieldOption.new("1", "Yes")
+    @options = []
+    @options << FieldOption.new("0")
+    @options << FieldOption.new("1", "True")
   end
 
 
   def set_values_for_type(klass)
-    return "^"
+    return "0"
   end
 
 end
