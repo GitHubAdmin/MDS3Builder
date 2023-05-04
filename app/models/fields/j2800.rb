@@ -2,7 +2,7 @@ class J2800
   attr_reader :options, :name, :field_type, :node
 
   def initialize
-    @name = "Genitourinary Surgery - Has the resident had genitourinary surgery involving male or female organs (such as prostate, testes, ovaries, uterus, vagina, external genitalia)? (Complete only if J2100 = 1) (J2800)"
+    @name = "Genitourinary Surgery - Has the resident had genitourinary surgery involving genital systems (such as prostate, testes, ovaries, uterus, vagina, external genitalia)? (Complete only if J2100 = 1) (J2800)"
     @field_type = RADIO
     @node = "J2800"
 
