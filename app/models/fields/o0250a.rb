@@ -1,5 +1,5 @@
 class O0250a
-  attr_reader :title, :options, :name, :field_type, :node
+  attr_reader :options, :name, :field_type, :node
 
   def initialize
     @name = "Did the resident receive the influenza vaccine in this facility for this years influenza season? (O0250a)"

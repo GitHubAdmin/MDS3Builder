@@ -1,5 +1,5 @@
 class O0300b
-  attr_reader :title, :options, :name, :field_type, :node
+  attr_reader :options, :name, :field_type, :node
 
   def initialize
     @name = "If Pneumococcal vaccine not received, state reason (O0300b)"

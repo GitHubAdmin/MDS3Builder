@@ -1,5 +1,5 @@
 class GG0100d
-  attr_reader :title, :options, :name, :field_type, :node
+  attr_reader :options, :name, :field_type, :node
 
   def initialize
     @name = "Functional Cognition: Code the resident's need for assistance with planning regular tasks, such as shopping or remembering to take medication prior to the current illness, exacerbation, or injury. (GG0100d)"

@@ -1,5 +1,5 @@
 class GG0100b
-  attr_reader :title, :options, :name, :field_type, :node
+  attr_reader :options, :name, :field_type, :node
 
   def initialize
     @name = "Indoor Mobility (Ambulation): Code the resident's need for assistance with walking from room to room (with or without a device such as cane, crutch or walker) prior to the current illness, exacerbation, or injury. (GG0100b)"

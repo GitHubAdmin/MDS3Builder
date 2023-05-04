@@ -1,5 +1,5 @@
 class GG0115b
-  attr_reader :title, :options, :name, :field_type, :node
+  attr_reader :options, :name, :field_type, :node
 
   def initialize
     @name = "Functional Limitation in Range of Motion - Lower extremity (hip, knee, ankle, foot): Code for limitation that interfered with daily functions or placed resident at risk of injury in the last 7 days (GG0115b)"
