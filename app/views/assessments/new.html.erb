@@ -5,13 +5,13 @@
     <input value="Export XML" class="btn default btn-submit" type="submit">
   </div>
   <% @assessment.klasses.each do |klass| %>
-     <% default = klass.set_values_for_type("#{@assessment.class}") %>
+    <% default = klass.set_values_for_type("#{@assessment.class}") %>
       <h3><%= if defined? klass.title then "#{klass.title}" end %></h3><br>
-        <strong><%=klass.name%></strong>
-        <% if klass.field_type == DROPDOWN %>
-          <br>
-          <select name="assessment[<%=klass.node%>]">
-          <% have_selected = klass.options.detect{|o| o.selected } %>
+      <strong><%=klass.name%></strong>
+      <% if klass.field_type == DROPDOWN %>
+        <br>
+        <select name="assessment[<%=klass.node%>]">
+        <% have_selected = klass.options.detect{|o| o.selected } %>
           <% klass.options.each do |option| %>
             <% if option.selected || (!have_selected && option.value == default) %>
               <option id="<%=klass.node+"_"+option.value%>" value="<%=option.value%>" selected="selected" ><%="#{option.value} - #{option.description}" %></option>
@@ -19,35 +19,45 @@
               <option id="<%=klass.node+"_"+option.value%>" value="<%=option.value%>" ><%="#{option.value} - #{option.description}"%></option>
             <% end %>
           <% end %>
-          </select> 
-        <% elsif klass.field_type == RADIO || klass.field_type == CHECKBOX %>
+        </select> 
+      <% elsif klass.field_type == RADIO  %>
         <% have_selected = klass.options.detect{|o| o.selected } %>
-          <div class="<%=input_type(klass.field_type)%>">
+        <div class="radio">
           <% klass.options.each do |option| %>
             <label for="<%=klass.node+"_"+option.value%>"><%=option.description%>
-            <input class="input-small search-query" type="<%=input_type(klass.field_type)%>" name="assessment[<%=klass.node%>]" value="<%=option.value%>" id="<%=klass.node+"_"+option.value%>" <%= 'checked' if option.selected || (!have_selected && option.value == default) %>/>
-          </label>
-            <% end %>
-          </div>
-        <% else %>
+              <input class="input-small search-query" type="<%=input_type(klass.field_type)%>" name="assessment[<%=klass.node%>]" value="<%=option.value%>" id="<%=klass.node+"_"+option.value%>" <%= 'checked' if option.selected || (!have_selected && option.value == default) %>/>
+            </label>
+          <% end %>
+        </div>
+      <% elsif klass.field_type == CHECKBOX %>
+        <div class="checkbox">
+          <% klass.options.each do |option| %>
+            <label for="<%=option.key+"_"+option.value%>"><%=option.description%>
+              <input class="input-small search-query" type="<%=input_type(klass.field_type)%>" name="assessment[<%=option.key%>]" value="<%=option.value%>" id="<%=option.key+"_"+option.value%>" <%= 'checked' if option.selected || (!have_selected && option.value == default) %>/>
+            </label>
+          <% end %>
+        </div>
+      <% else %>
         <% have_selected = klass.options.detect{|o| o.selected } %>
-          <div class="<%=input_type(klass.field_type)%>">
-            <% klass.options.each do |option| %>
-              <% if have_selected %>
-                <label for="<%=klass.node+"_"+option.value%>"><%=option.description%>
-                <input class="input-small search-query" type="<%=input_type(klass.field_type)%>" name="assessment[<%=klass.node%>]" value="<%=option.value%>" id="<%=klass.node+"_"+option.value%>"></label>
-              <% else %>
-                <label for="<%=klass.node+"_"+option.value%>"><%=option.description%>
-                <input class="input-small search-query" type="<%=input_type(klass.field_type)%>" name="assessment[<%=klass.node%>]" value="<%=default%>" id="<%=klass.node+"_"+option.value%>"></label>
-              <% end %>
+        <div class="<%=input_type(klass.field_type)%>">
+          <% klass.options.each do |option| %>
+            <% if have_selected %>
+              <label for="<%=klass.node+"_"+option.value%>"><%=option.description%>
+                <input class="input-small search-query" type="<%=input_type(klass.field_type)%>" name="assessment[<%=klass.node%>]" value="<%=option.value%>" id="<%=klass.node+"_"+option.value%>">
+              </label>
+            <% else %>
+              <label for="<%=klass.node+"_"+option.value%>"><%=option.description%>
+                <input class="input-small search-query" type="<%=input_type(klass.field_type)%>" name="assessment[<%=klass.node%>]" value="<%=default%>" id="<%=klass.node+"_"+option.value%>">
+              </label>
             <% end %>
-          </div>
-       <% end %>
-     <% end %>
- <div align="center">
-    <input value="Print to XML" class="btn default btn-submit" type="submit">
-  </div><br>
+          <% end %>
+        </div>
+      <% end %>
+  <% end %>
   <div align="center">
-   <a class="btn default btn-submit" href="/">Back to Create</a>
+    <input value="Print to XML" class="btn default btn-submit" type="submit">
+    <div align="center">
+      <a class="btn default btn-submit" href="/">Back to Create</a>
+    </div>
   </div>
 </form>
