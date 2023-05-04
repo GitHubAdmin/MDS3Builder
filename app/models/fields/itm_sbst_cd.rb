@@ -55,8 +55,6 @@ class ItmSbstCd
     when "MdsInterimPayment" then return "IPA"
     when "CorrectionOfInterimPayment" then return "IPA"
     when "InactivationOfInterimPayment" then return "XX"
-    when "QP017AdmissionPos" then "NC"
-    when "QP017AdmissionPos" then "NQ"
     end
   end
 

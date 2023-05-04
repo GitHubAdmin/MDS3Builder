@@ -2,14 +2,14 @@ class GG0130a5
   attr_reader :title, :options, :name, :field_type, :node
 
   def initialize
-    @title = "Section GG: Functional Abilities and Goals - Interim Payment Assessment"
+    @title = "Section GG: Functional Abilities and Goals - OBRA/Interim"
     @name = "Self-Care - Eating (Interim Performance) - The ability to use suitable utensils to bring food and/or liquid to the mouth and swallow food and/or liquid once the meal is placed before the resident. (GG0130a5)"
     @field_type = DROPDOWN
     @node = "GG0130A5" 
 
     @options = []
     @options << FieldOption.new("^", "NA")
-    @options << FieldOption.new("06", "Independent - Resident completes the activity by him/herself with no assistance from a helper.")
+    @options << FieldOption.new("06", "Independent - Resident completes the activity by themself with no assistance from a helper")
     @options << FieldOption.new("05", "Setup or clean-up assistance - Helper sets up or cleans up; resident completes activity. Helper assists only prior to or following the activity.")
     @options << FieldOption.new("04", "Supervision or touching assistance - Helper provides verbal cues and/or touching/steadying and/or contact guard assistance as resident completes activity. Assistance may be provided throughout the activity or intermittently.")
     @options << FieldOption.new("03", "Partial/moderate assistance - Helper does LESS THAN HALF the effort. Helper lifts, holds, or supports trunk or limbs, but provides less than half the effort.")

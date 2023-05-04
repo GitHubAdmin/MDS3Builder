@@ -9,7 +9,7 @@ class F0300
 
     @options = []
     @options << FieldOption.new("^", "NA")
-    @options << FieldOption.new("0", "No (resident is rarely/never understoond and family/significant other not available)")
+    @options << FieldOption.new("0", "No (resident is rarely/never understood and family/significant other not available)")
     @options << FieldOption.new("1", "Yes")
   end
 

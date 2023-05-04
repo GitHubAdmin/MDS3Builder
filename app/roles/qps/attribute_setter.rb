@@ -7,10 +7,12 @@ module Qps::AttributeSetter
 
   def radio_and_dropdown_klasses_to_nil
     #to do here removed K0510B2
-    array = [ "B0200", "B0300", "B1000", "B1200", "E0200A", "E0800", "E1000A", "G0110A1", "G0110B1", "G0110D1", "G0110E1", "G0110F1", "G0110G1", "G0110H1", "G0110I1",
-              "G0110J1", "G0120A","G0400A", "G0400B", "G0600B", "G0600C", "H0100A", "H0300", "H0400", "I2300", "I2500", "J1550C", "K0300", "L0200A", 
-              "L0200B", "L0200C", "L0200D", "L0200E", "L0200F", "L0200G", "M0210", "N0410A", "N0410B", "N0410C", "N0410D", "N0410E", "N0410F",
-              "N0410G", "O0400B4", "O0400C4", "P0100B", "P0100C", "P0100D", "P0100E", "P0100F", "P0100G",]
+    array = [ "B0200", "B0300", "B1000", "B1200", "E0200A", "E0800", "E1000A", 
+              # TODO: These "G" fields are deleted in v1.18, do we need to replace with something else here? 
+              # "G0110A1", "G0110B1", "G0110D1", "G0110E1", "G0110F1", "G0110G1", "G0110H1", "G0110I1", "G0110J1", "G0120A","G0400A", "G0400B", "G0600B", "G0600C", 
+              "H0100A", "H0300", "H0400", "I2300", "I2500", "J1550C", "K0300", "L0200A", 
+              "L0200B", "L0200C", "L0200D", "L0200E", "L0200F", "L0200G", "M0210", "N0400A", "N0400B", "N0400C", "N0400D", "N0400E", "N0400F", "N0400G", "N0400H", "N0400I", "N0400J",
+              "O0400B4", "O0400C4", "P0100B", "P0100C", "P0100D", "P0100E", "P0100F", "P0100G",]
   end
 
   def text_klasses_to_nil
