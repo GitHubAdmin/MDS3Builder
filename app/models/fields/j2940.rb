@@ -3,14 +3,12 @@ class J2940
 
   def initialize
     @name = "Other Major Surgery - Has the resident had other major surgery involving the repair of deep ulcers, internal brachytherapy, bone marrow, or stem cell harvest or transplant? (Complete only if J2100 = 1) (J2940)"
-    @field_type = RADIO
+    @field_type = CHECKBOX
     @node = "J2940"
 
     @options = []
-
-    @options << FieldOption.new("^", "NA")
-    @options << FieldOption.new("0", "No")
-    @options << FieldOption.new("1", "Yes")
+    @options << FieldOption.new("0")
+    @options << FieldOption.new("1", "True")
   end
 
   def set_values_for_type(klass)

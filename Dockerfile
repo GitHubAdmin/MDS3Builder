@@ -1,3 +1,10 @@
+# docker buildx build \
+#   --progress=plain \
+#   --platform "linux/amd64,linux/arm64" \
+#   --push -t ghcr.io/githubadmin/mds30-builder:1.17 \
+#   -f Dockerfile .
+
+
 # docker build --progress=plain -t local/services_tools:latest .
 FROM ruby:2.5.9-buster
 

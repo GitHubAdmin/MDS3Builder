@@ -1,5 +1,5 @@
 class C1310a
-  attr_reader :title, :options, :name, :field_type, :node
+  attr_reader :options, :name, :field_type, :node
 
   def initialize
     @name = "Acute Onset Mental Change - Is there evidence of an acute change in mental status from the resident's baseline? (C1310a)"

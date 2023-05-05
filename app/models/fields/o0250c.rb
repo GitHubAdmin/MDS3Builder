@@ -1,5 +1,5 @@
 class O0250c
-  attr_reader :title, :options, :name, :field_type, :node
+  attr_reader :options, :name, :field_type, :node
 
   def initialize
     @name = "If Influenza vaccine not received, state reason (O0250c)"
