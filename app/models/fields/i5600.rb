@@ -3,14 +3,12 @@ class I5600
 
   def initialize
     @name = "Nutritional: Does the resident have Malnutrition (protein or calorie) or is the resident at risk for malnutrition? (I5600)"
-    @field_type = RADIO
+    @field_type = CHECKBOX
     @node = "I5600"
 
     @options = []
-
-    @options << FieldOption.new("^", "NA")
-    @options << FieldOption.new("0", "No")
-    @options << FieldOption.new("1", "Yes")
+    @options << FieldOption.new("0")
+    @options << FieldOption.new("1", "True")
   end
 
   def set_values_for_type(klass)

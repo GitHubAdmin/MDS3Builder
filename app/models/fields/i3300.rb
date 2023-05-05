@@ -3,14 +3,12 @@ class I3300
 
   def initialize
     @name = "Metabolic: Does the resident have Hyperlipidemia? (I3300)"
-    @field_type = RADIO
+    @field_type = CHECKBOX
     @node = "I3300"
 
     @options = []
-
-    @options << FieldOption.new("^", "NA")
-    @options << FieldOption.new("0", "No")
-    @options << FieldOption.new("1", "Yes")
+    @options << FieldOption.new("0")
+    @options << FieldOption.new("1", "True")
   end
 
   def set_values_for_type(klass)

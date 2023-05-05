@@ -3,13 +3,12 @@ class J0800d
 
   def initialize
     @name = "Indicators of Pain or Possible Pain in the last 5 days: Protective body movements or postures (J0800d)"
-    @field_type = DROPDOWN
+    @field_type = CHECKBOX
     @node = "J0800D"
     
     @options = []
-    @options << FieldOption.new("^", "NA")
-    @options << FieldOption.new("0", "No")
-    @options << FieldOption.new("1", "Yes")
+    @options << FieldOption.new("0")
+    @options << FieldOption.new("1", "True")
   end
 
   def set_values_for_type(klass)

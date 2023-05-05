@@ -4,13 +4,12 @@ class H0100a
   def initialize
     @title = "Section H: Bladder and Bowel"
     @name = "Indwelling catheter (H0100a)"
-    @field_type = RADIO
+    @field_type = CHECKBOX
     @node = "H0100A"
 
     @options = []
-    @options << FieldOption.new("^", "NA")
-    @options << FieldOption.new("0", "No")
-    @options << FieldOption.new("1", "Yes")
+    @options << FieldOption.new("0")
+    @options << FieldOption.new("1", "True")
   end
 
   def set_values_for_type(klass)

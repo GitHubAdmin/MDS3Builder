@@ -3,13 +3,12 @@ class J1100b
 
   def initialize
     @name = "Does the resident have shortness of breath when sitting at rest (J1100b)"
-    @field_type = RADIO
+    @field_type = CHECKBOX
     @node = "J1100B"
 
     @options = []
-    @options << FieldOption.new("^", "NA")
-    @options << FieldOption.new("0", "No")
-    @options << FieldOption.new("1", "Yes")
+    @options << FieldOption.new("0")
+    @options << FieldOption.new("1", "True")
   end
 
   def set_values_for_type(klass)

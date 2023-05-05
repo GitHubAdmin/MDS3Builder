@@ -3,14 +3,13 @@ class I1700
 
   def initialize
     @name = "Infections: Does the resident have a Multidrug-Resistant Organism? (I1700)"
-    @field_type = RADIO
+    @field_type = CHECKBOX
     @node = "I1700"
 
-    @options = []
 
-    @options << FieldOption.new("^", "NA")
-    @options << FieldOption.new("0", "No")
-    @options << FieldOption.new("1", "Yes")
+    @options = []
+    @options << FieldOption.new("0")
+    @options << FieldOption.new("1", "True")
   end
 
   def set_values_for_type(klass)
