@@ -3,13 +3,12 @@ class I2500
 
   def initialize
     @name = "Infections: Does the resident have a Wound Infection (other than foot)? (I2500)"
-    @field_type = RADIO
+    @field_type = CHECKBOX
     @node = "I2500"
 
     @options = []
-    @options << FieldOption.new("^", "NA")
-    @options << FieldOption.new("0", "None")
-    @options << FieldOption.new("1", "Yes")
+    @options << FieldOption.new("0")
+    @options << FieldOption.new("1", "True")
   end
 
   def set_values_for_type(klass)

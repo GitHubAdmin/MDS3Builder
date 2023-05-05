@@ -3,14 +3,13 @@ class I5800
 
   def initialize
     @name = "Psychiatric/Mood Disorder: Does the resident have Depression (other than bipolar)? (I5800)"
-    @field_type = RADIO
+    @field_type = CHECKBOX
     @node = "I5800"
 
-    @options = []
 
-    @options << FieldOption.new("^", "NA")
-    @options << FieldOption.new("0", "No")
-    @options << FieldOption.new("1", "Yes")
+    @options = []
+    @options << FieldOption.new("0")
+    @options << FieldOption.new("1", "True")
   end
 
   def set_values_for_type(klass)

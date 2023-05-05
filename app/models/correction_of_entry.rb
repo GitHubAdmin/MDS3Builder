@@ -20,7 +20,7 @@ class CorrectionOfEntry < Assessment
               
               J1100b J1400 J1550a J1550c 
               
-              K0200a K0200b K0300 K0510a2 K0510b2 
+              K0200a K0200b K0300
               
               L0200a L0200b L0200c L0200d L0200e L0200f L0200g  
               
