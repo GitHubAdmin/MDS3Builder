@@ -1,10 +1,10 @@
-class A1100a 
-  attr_reader :options, :name, :field_type, :node 
+class A0500d
+  attr_reader :options, :name, :field_type, :node
 
   def initialize
-    @name = "Preferred language (A1100a)"
+    @name = "Suffix (A0500d)"
     @field_type = TEXT
-    @node = "A1100A" 
+    @node = "A0500D"
 
     @options = []
     @options << FieldOption.new("")

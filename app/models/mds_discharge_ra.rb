@@ -8,7 +8,7 @@ class MdsDischargeRa < Assessment
 
   def fields
     super + %w( 
-              A2300 
+              A2105 A2300 
               B0100 B0200 B0300 B1000 B1200 
               C0100 C0200 C0300a C0300b C0300c C0400a C0400b C0400c C0700 C1000 C1310a C1310b C1310c C1310d
               D0100 D0150a1 D0150a2 D0150b1 D0150b2 D0150c1 D0150c2 D0150d1 D0150d2 D0150e1 D0150e2 D0150f1 D0150f2 D0150g1 D0150g2 D0150h1 D0150h2 D0150i1 D0150i2 D0160
@@ -32,6 +32,7 @@ class MdsDischargeRa < Assessment
               O0250a O0250b O0250c O0300a O0300b
                             
               P0100a P0100b P0100c P0100d P0100e P0100f P0100g P0100h 
+              Q0400a Q0610a Q0620
               X0600h_title )
   end
 end

@@ -8,7 +8,7 @@ class MdsEntry < Assessment
 
   def fields
     super + %w( 
-              A2300
+              A2105 A2300
               B0100 B0200 B0300 B1000 B1200 
               E0200a E0800 E1000a 
               H0100a H0300 H0400 

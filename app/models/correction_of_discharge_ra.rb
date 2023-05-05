@@ -8,7 +8,7 @@ class CorrectionOfDischargeRa < Assessment
 
   def fields
     super + %w( 
-              A2200 A2300 
+              A2105 A2200 A2300 
               
               B0100 B0200 B0300 B1000 B1200 
               
@@ -42,6 +42,8 @@ class CorrectionOfDischargeRa < Assessment
               O0250a O0250b O0250c O0300a O0300b
               
               P0100a P0100b P0100c P0100d P0100e P0100f P0100g P0100h 
+
+              Q0400a Q0610a Q0620
               
               X0150 X0200a X0200c X0300 X0400 X0500 X0600a X0600b X0600f X0600h X0700b X0700c )
   end
