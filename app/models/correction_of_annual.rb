@@ -8,7 +8,7 @@ class CorrectionOfAnnual < Assessment
 
   def fields
     super + %w( 
-              A2200 A2300 
+              A2105 A2200 A2300 
               
               B0100 B0200 B0300 B0600 B0700 B0800 B1000 B1200 
 
