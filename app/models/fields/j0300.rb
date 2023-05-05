@@ -1,7 +1,8 @@
 class J0300
-  attr_reader :options, :name, :field_type, :node
+  attr_reader :title, :options, :name, :field_type, :node
 
   def initialize
+    @title = "Pain Assessment Interview"
     @name = "Pain Presence: Ask resident: 'Have you had pain or hurting at any time in the last 5 days?' (J0300)"
     @field_type = DROPDOWN
     @node = "J0300"

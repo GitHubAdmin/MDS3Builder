@@ -29,11 +29,11 @@
             </label>
           <% end %>
         </div>
-      <% elsif klass.field_type == CHECKBOX %>
+      <% elsif klass.field_type == CHECKBOX && klass.node == 'J0800'%>
         <div class="checkbox">
           <% klass.options.each do |option| %>
             <label for="<%=option.key+"_"+option.value%>"><%=option.description%>
-              <input class="input-small search-query" type="<%=input_type(klass.field_type)%>" name="assessment[<%=option.key%>]" value="<%=option.value%>" id="<%=option.key+"_"+option.value%>" <%= 'checked' if option.selected || (!have_selected && option.value == default) %>/>
+              <input class="search-query" type="<%=input_type(klass.field_type)%>" name="assessment[<%=option.key%>]" value="<%=option.value%>" id="<%=option.key+"_"+option.value%>" <%= 'checked' if option.selected || (!have_selected && option.value == default) %>/>
             </label>
           <% end %>
         </div>

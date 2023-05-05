@@ -1,5 +1,5 @@
 class GG0130a3
-  attr_reader :options, :name, :field_type, :node
+  attr_reader :title, :options, :name, :field_type, :node
 
   def initialize
     @title = "Section GG - Functional Abilities and Goals - Discharge"

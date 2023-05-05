@@ -3,7 +3,7 @@ class H0600
 
   def initialize
     @name = "Bowel Patterns: Consitpation present? (H0600)"
-    @field_type = RADIO
+    @field_type = DROPDOWN
     @node = "H0100D"
 
     @options = []
