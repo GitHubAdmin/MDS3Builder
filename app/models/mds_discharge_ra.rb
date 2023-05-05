@@ -32,6 +32,7 @@ class MdsDischargeRa < Assessment
               O0250a O0250b O0250c O0300a O0300b
                             
               P0100a P0100b P0100c P0100d P0100e P0100f P0100g P0100h 
+              Q0400a Q0610a Q0620
               X0600h_title )
   end
 end

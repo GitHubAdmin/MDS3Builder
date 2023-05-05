@@ -43,6 +43,8 @@ class CorrectionOfDischargeRna < Assessment
                             
               P0100a P0100b P0100c P0100d P0100e P0100f P0100g P0100h  
               
+              Q0400a Q0610a Q0620
+              
               X0150 X0200a X0200c X0300 X0400 X0500 X0600a X0600b X0600f X0600h X0700b X0700c )
   end
 end
