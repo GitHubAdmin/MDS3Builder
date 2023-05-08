@@ -8,12 +8,11 @@ class Q0620
 
     @options = []
     @options << FieldOption.new("^", "NA")
-    @options << FieldOption.new("01", "Resident")
-    @options << FieldOption.new("02", "Family")
-    @options << FieldOption.new("03", "Significant other")
-    @options << FieldOption.new("04", "Legal guardian")
-    @options << FieldOption.new("05", "Other legally authorized representative")
-    @options << FieldOption.new("09", "None of the above")
+    @options << FieldOption.new("01", "LCA unknown")
+    @options << FieldOption.new("02", "Referral previously made")
+    @options << FieldOption.new("03", "Referral not wanted")
+    @options << FieldOption.new("04", "Discharge date 3 or fewer months away")
+    @options << FieldOption.new("05", "Discharge date more than 3 months away")
   end
 
   def set_values_for_type(klass)
