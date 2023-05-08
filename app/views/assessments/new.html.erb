@@ -29,7 +29,7 @@
             </label>
           <% end %>
         </div>
-      <% elsif klass.field_type == CHECKBOX && klass.node == 'J0800'%>
+      <% elsif klass.field_type == CHECKBOX %>
         <div class="checkbox">
           <% klass.options.each do |option| %>
             <label for="<%=option.key+"_"+option.value%>"><%=option.description%>
