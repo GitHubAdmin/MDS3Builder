@@ -16,15 +16,15 @@ include AssessmentHelper
     assmnt_type = assessment_type(klass)
     @options = []
     if assmnt_type != "NPE"
-      @options << FieldOption.new("0", key: "K0520A1")
-      @options << FieldOption.new("1", "On Admission (K0520a1)", key: "K0520A1")
-      @options << FieldOption.new("0", key: "K0520A2")
-      @options << FieldOption.new("1", "While Not a Resident (K0520a2)", key: "K0520A2")
+      @options << FieldOption.new("0", key: "K0520A1") if ! ["ND","IPA"].include?(assmnt_type)
+      @options << FieldOption.new("1", "On Admission (K0520a1)", key: "K0520A1") if ! ["ND","IPA"].include?(assmnt_type)
+      @options << FieldOption.new("0", key: "K0520A2") if assmnt_type != "ND"
+      @options << FieldOption.new("1", "While Not a Resident (K0520a2)", key: "K0520A2") if assmnt_type != "ND"
       @options << FieldOption.new("0", key: "K0520A3")
       @options << FieldOption.new("1", "While a Resident (K0520a3)", key: "K0520A3")
     end
-    @options << FieldOption.new("0", key: "K0520A4")
-    @options << FieldOption.new("1", "At Discharge (K0520a4)", key: "K0520A4")
+    @options << FieldOption.new("0", key: "K0520A4") if assmnt_type != "IPA"
+    @options << FieldOption.new("1", "At Discharge (K0520a4)", key: "K0520A4") if assmnt_type != "IPA"
   end
 
 end

@@ -1,4 +1,5 @@
 class H0100
+include AssessmentHelper
   attr_reader :title, :options, :name, :field_type, :node
 
   def initialize
@@ -13,11 +14,14 @@ class H0100
   end
 
   def set_options_for_type(klass)
+    assmnt_type = assessment_type(klass)
     @options = []
-    @options << FieldOption.new("0", key: "H0100A")
-    @options << FieldOption.new("1", "Indwelling catheter (including suprapubic catheter and nephrostomy tube) (H0100a)", key: "H0100A")
-    @options << FieldOption.new("0", key: "H0100B")
-    @options << FieldOption.new("1", "External catheter (H0100b)", key: "H0100B")
+    if assmnt_type != "IPA"
+      @options << FieldOption.new("0", key: "H0100A")
+      @options << FieldOption.new("1", "Indwelling catheter (including suprapubic catheter and nephrostomy tube) (H0100a)", key: "H0100A")
+      @options << FieldOption.new("0", key: "H0100B")
+      @options << FieldOption.new("1", "External catheter (H0100b)", key: "H0100B")
+    end
     @options << FieldOption.new("0", key: "H0100C")
     @options << FieldOption.new("1", "Ostomy (including urostomy, ileostomy, and colostomy) (H0100c)", key: "H0100C")
     @options << FieldOption.new("0", key: "H0100D")

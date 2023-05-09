@@ -15,12 +15,12 @@ include AssessmentHelper
   def set_options_for_type(klass)
     assmnt_type = assessment_type(klass)
     @options = []
-    if ! ["NQ","NP"].include?(assmnt_type)
+    if ! ["NQ","NP","ND"].include?(assmnt_type)
       @options << FieldOption.new("0", key: "I1400")
       @options << FieldOption.new("1", "Benign Prostatic Hyperplasia (BPH) (I1400)", key: "I1400")
     end
-    @options << FieldOption.new("0", key: "I1500")
-    @options << FieldOption.new("1", "Renal Insufficiency, Renal Failure, or End-Stage Renal Disease (ESRD) (I1500)", key: "I1500")
+    @options << FieldOption.new("0", key: "I1500") if assmnt_type != "ND"
+    @options << FieldOption.new("1", "Renal Insufficiency, Renal Failure, or End-Stage Renal Disease (ESRD) (I1500)", key: "I1500") if assmnt_type != "ND"
     @options << FieldOption.new("0", key: "I1550")
     @options << FieldOption.new("1", "Neurogenic Bladder (I1550)", key: "I1550")
     @options << FieldOption.new("0", key: "I1650")

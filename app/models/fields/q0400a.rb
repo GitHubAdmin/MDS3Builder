@@ -1,5 +1,5 @@
 class Q0400a
-    attr_reader :title, :options, :name, :field_type, :node
+    attr_reader :options, :name, :field_type, :node
   
     def initialize
       @name = "Is active discharge planning already occurring for the resident to return to the community? (Q0400a)"

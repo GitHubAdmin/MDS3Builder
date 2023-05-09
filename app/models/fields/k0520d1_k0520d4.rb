@@ -16,8 +16,8 @@ include AssessmentHelper
     assmnt_type = assessment_type(klass)
     @options = []
     if assmnt_type != "NPE"
-      @options << FieldOption.new("0", key: "K0520D1")
-      @options << FieldOption.new("1", "On Admission (K0520d1)", key: "K0520D1")
+      @options << FieldOption.new("0", key: "K0520D1") if assmnt_type != "ND"
+      @options << FieldOption.new("1", "On Admission (K0520d1)", key: "K0520D1") if assmnt_type != "ND"
       @options << FieldOption.new("0", key: "K0520D3")
       @options << FieldOption.new("1", "While a Resident (K0520d3)", key: "K0520D3")
     end

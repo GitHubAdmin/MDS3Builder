@@ -1,4 +1,5 @@
 class I5700_I6100
+include AssessmentHelper
   attr_reader :options, :name, :field_type, :node
 
   def initialize
@@ -12,11 +13,12 @@ class I5700_I6100
   end
 
   def set_options_for_type(klass)
+    assmnt_type = assessment_type(klass)
     @options = []
     @options << FieldOption.new("0", key: "I5700")
     @options << FieldOption.new("1", "Anxiety Disorder (I5700)", key: "I5700")
-    @options << FieldOption.new("0", key: "I5800")
-    @options << FieldOption.new("1", "Depression (other than bipolar) (I5800)", key: "I5800")
+    @options << FieldOption.new("0", key: "I5800") if assmnt_type != "ND"
+    @options << FieldOption.new("1", "Depression (other than bipolar) (I5800)", key: "I5800") if assmnt_type != "ND"
     @options << FieldOption.new("0", key: "I5900")
     @options << FieldOption.new("1", "Bipolar Disorder (I5900)", key: "I5900")
     @options << FieldOption.new("0", key: "I5950")

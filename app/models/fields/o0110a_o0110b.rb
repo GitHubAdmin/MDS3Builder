@@ -16,7 +16,7 @@ end
   def set_options_for_type(klass)
     assmnt_type = assessment_type(klass)
     @options = []
-    if assmnt_type != "NPE"
+    if ! ["ND","NPE"].include?(assmnt_type)
       # @options << FieldOption.new("0", key: "O0110A1A")
       # @options << FieldOption.new("1", "Chemotherapy (Any) - On Admission (O0110a1a)", key: "O0110A1A")
       @options << FieldOption.new("0", key: "O0110A1B")
@@ -36,6 +36,8 @@ end
       @options << FieldOption.new("1", "Chemotherapy (IV) - At Discharge (O0110a2c)", key: "O0110A2C")
       @options << FieldOption.new("0", key: "O0110A3C")
       @options << FieldOption.new("1", "Chemotherapy (Oral) - At Discharge (O0110a3c)", key: "O0110A3C")
+      @options << FieldOption.new("0", key: "O0110A10C")
+      @options << FieldOption.new("1", "Chemotherapy (Other) - At Discharge (O0110a10c)", key: "O0110A10C")
       @options << FieldOption.new("0", key: "O0110B1C")
       @options << FieldOption.new("1", "Radiation (Any) - At Discharge (O0110b1c)", key: "O0110B1C")
     end

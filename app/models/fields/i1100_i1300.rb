@@ -15,7 +15,7 @@ include AssessmentHelper
   def set_options_for_type(klass)
     assmnt_type = assessment_type(klass)
     @options = []
-    if ! ["NQ","NP"].include?(assmnt_type)
+    if ! ["NQ","NP","IPA"].include?(assmnt_type)
       @options << FieldOption.new("0", key: "I1100") 
       @options << FieldOption.new("1", "Cirrhosis (I1100)", key: "I1100")
       @options << FieldOption.new("0", key: "I1200")

@@ -15,8 +15,8 @@ include AssessmentHelper
   def set_options_for_type(klass)
     assmnt_type = assessment_type(klass)
     @options = []
-    if assmnt_type != "NPE"
-    # ***************
+    if ! ["ND","NPE"].include?(assmnt_type)
+      # ***************
     # O0110C1 - O0110C4
     # @options << FieldOption.new("0", key: "O0110H1A")
     # @options << FieldOption.new("1", "IV Medications (Any) - On Admission (O0110h1a)", key: "O0110H1A")
@@ -51,8 +51,8 @@ include AssessmentHelper
 
     # ***************
     # O0110K1B
-    @options << FieldOption.new("0", key: "O0110K1B")
-    @options << FieldOption.new("1", "Hospice care - While a Resident (O0110k1b)", key: "O0110K1B")
+    @options << FieldOption.new("0", key: "O0110K1B") if assmnt_type != "IPA"
+    @options << FieldOption.new("1", "Hospice care - While a Resident (O0110k1b)", key: "O0110K1B") if assmnt_type != "IPA"
 
     # ***************
     # O0110M1B
@@ -63,8 +63,8 @@ include AssessmentHelper
     # O0110O1 - O0110O4
     # @options << FieldOption.new("0", key: "O0110O1A")
     # @options << FieldOption.new("1", "IV Access (Any) - On Admission (O0110o1a)", key: "O0110O1A")
-    @options << FieldOption.new("0", key: "O0110O1B")
-    @options << FieldOption.new("1", "IV Access (Any) - While a Resident (O0110o1b)", key: "O0110O1B")
+    @options << FieldOption.new("0", key: "O0110O1B") if assmnt_type != "IPA"
+    @options << FieldOption.new("1", "IV Access (Any) - While a Resident (O0110o1b)", key: "O0110O1B") if assmnt_type != "IPA"
     # @options << FieldOption.new("0", key: "O0110O2A")
     # @options << FieldOption.new("1", "IV Access (Peripheral) - On Admission (O0110o2a)", key: "O0110O2A")
     # @options << FieldOption.new("0", key: "O0110O3A")

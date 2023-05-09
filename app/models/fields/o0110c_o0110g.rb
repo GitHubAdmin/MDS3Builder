@@ -15,8 +15,8 @@ include AssessmentHelper
   def set_options_for_type(klass)
     assmnt_type = assessment_type(klass)
     @options = []
-    if assmnt_type != "NPE"
-    # ***************
+    if ! ["ND","NPE"].include?(assmnt_type)
+      # ***************
     # O0110C1 - O0110C4
     # @options << FieldOption.new("0", key: "O0110C1A")
     # @options << FieldOption.new("1", "Oxygen Therapy (Any) - On Admission (O0110c1a)", key: "O0110C1A")
@@ -58,8 +58,8 @@ include AssessmentHelper
     # O0110G1 - O0110G3
     # @options << FieldOption.new("0", key: "O0110G1A")
     # @options << FieldOption.new("1", "Non-invasive Mechanical Ventilator (any) - On Admission (O0110g1a)", key: "O0110G1A")
-    @options << FieldOption.new("0", key: "O0110G1B")
-    @options << FieldOption.new("1", "Non-invasive Mechanical Ventilator (any) - While a Resident (O0110g1b)", key: "O0110G1B")
+    @options << FieldOption.new("0", key: "O0110G1B") if assmnt_type != "IPA"
+    @options << FieldOption.new("1", "Non-invasive Mechanical Ventilator (any) - While a Resident (O0110g1b)", key: "O0110G1B") if assmnt_type != "IPA"
     # @options << FieldOption.new("0", key: "O0110G2A")
     # @options << FieldOption.new("1", "Non-invasive Mechanical Ventilator (BiPAP) - On Admission (O0110g2a)", key: "O0110G2A")
     # @options << FieldOption.new("0", key: "O0110G3A")
