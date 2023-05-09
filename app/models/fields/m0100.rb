@@ -5,8 +5,14 @@ class M0100
     @title = "Section M: Skin Conditions"
     @name = "Determination of Pressure Ulcer/Injury Risk (Check all that apply) (M0100)"
     @field_type = CHECKBOX
-    @node = "M0100" 
+    @node = "M0100"
+  end
 
+  def set_values_for_type(klass)
+    return "0"
+  end
+
+  def set_options_for_type(klass)
     @options = []
     @options << FieldOption.new("0", key: "M0100A")
     @options << FieldOption.new("1", "Resident has a pressure ulcer/injury, a scar over bony prominence, or a non-removable dressing/device (M0100a)", key: 'M0100A')
@@ -14,10 +20,6 @@ class M0100
     @options << FieldOption.new("1", "Formal assessment instrument/tool (e.g., Braden, Norton, or other) (M0100b)", key: 'M0100B')
     @options << FieldOption.new("0", key: "M0100C")
     @options << FieldOption.new("1", "Clinical assessment (M0100c)", key: 'M0100C')
-  end
-
-  def set_values_for_type(klass)
-    return "0"
   end
   
 end

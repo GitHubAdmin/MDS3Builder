@@ -4,7 +4,7 @@ class F0400e
   def initialize
     @name = "Interview for Daily Preferences: Ask resident: While you are in this facility, how important is it to you to choose your own bedtime? (F0400e)"
     @field_type = DROPDOWN
-    @node = "F0400e"
+    @node = "F0400E"
 
     @options = []
     @options << FieldOption.new("^", "NA")

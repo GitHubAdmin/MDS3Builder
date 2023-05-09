@@ -5,7 +5,13 @@ class A1005
     @name = "Ethnicity: Is resident of Hispanic, Latino/a, or Spanish origin? (Check all that apply) (A1005)"
     @field_type = CHECKBOX
     @node = "A1005" 
+  end
 
+  def set_values_for_type(klass)
+    return "0"
+  end
+
+  def set_options_for_type(klass)
     @options = []
     @options << FieldOption.new("0", key: "A1005A")
     @options << FieldOption.new("1", "No, not of Hispanic, Latino/a, or Spanish origin (A1005a)", key: "A1005A")
@@ -21,10 +27,6 @@ class A1005
     @options << FieldOption.new("1", "Resident unable to respond (A1005x)", key: "A1005X")
     @options << FieldOption.new("0", key: "A1005Y")
     @options << FieldOption.new("1", "Resident declines to respond (A1005y)", key: "A1005Y")
-  end
-
-  def set_values_for_type(klass)
-    return "0"
   end
 
 end

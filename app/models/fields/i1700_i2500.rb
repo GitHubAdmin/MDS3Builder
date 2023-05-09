@@ -5,7 +5,13 @@ class I1700_I2500
     @name = "Infections: Active Diagnoses in the last 7 days (Check all that apply) (I1700 - I2500)"
     @field_type = CHECKBOX
     @node = "I1700_I2500"
+  end
 
+  def set_values_for_type(klass)
+    return "0"
+  end
+
+  def set_options_for_type(klass)
     @options = []
     @options << FieldOption.new("0", key: "I1700")
     @options << FieldOption.new("1", "Multidrug-Resistant Organism (MDRO) (I1700)", key: "I1700")
@@ -23,8 +29,5 @@ class I1700_I2500
     @options << FieldOption.new("1", "Wound Infection (other than foot) (I2500)", key: "I2500")
   end
 
-  def set_values_for_type(klass)
-    return "0"
-  end
 
 end

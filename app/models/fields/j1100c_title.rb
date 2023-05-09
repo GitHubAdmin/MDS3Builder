@@ -6,14 +6,16 @@ class J1100c_title
     @name = "Shortness of Breath (dyspnea) - (Check all that apply) (J1100)"
     @field_type = CHECKBOX
     @node = "J1100C"
-    
-    @options = []
-    @options << FieldOption.new("0", key: "J1100C")
-    @options << FieldOption.new("1", "Shortness of breath or trouble breathing when lying flat (J1100C)", key: "J1100C ")
   end
 
   def set_values_for_type(klass)
     return "0"
+  end
+
+  def set_options_for_type(klass)
+    @options = []
+    @options << FieldOption.new("0", key: "J1100C")
+    @options << FieldOption.new("1", "Shortness of breath or trouble breathing when lying flat (J1100C)", key: "J1100C ")
   end
 
 end

@@ -5,7 +5,13 @@ class F0800
     @name = "Staff Assessment of Daily and Activity Preferences (Check all that apply) (F0800)"
     @field_type = CHECKBOX
     @node = "F0800" 
+  end
 
+  def set_values_for_type(klass)
+    return "0"
+  end
+
+  def set_options_for_type(klass)
     @options = []
     @options << FieldOption.new("0", key: "F0800A")
     @options << FieldOption.new("1", "Choosing clothes to wear (F0800a)", key: "F0800A")
@@ -47,10 +53,6 @@ class F0800
     @options << FieldOption.new("1", "Spending time outdoors (F0800s)", key: "F0800S")
     @options << FieldOption.new("0", key: "F0800T")
     @options << FieldOption.new("1", "Participating in religious activities or practices (F0800t)", key: "F0800T")
-  end
-
-  def set_values_for_type(klass)
-    return "0"
-  end
+  end 
 
 end

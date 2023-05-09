@@ -4,7 +4,7 @@ class GG0170l3
   def initialize
     @name = "Mobility - Walking 10 feet on uneven surfaces (Discharge Performance) - The ability to walk 10 feet on uneven or sloping surfaces (indoor or outdoor), such as turf or gravel. (GG0170l3)"
     @field_type = DROPDOWN
-    @node = "GG0170l3" 
+    @node = "GG0170L3" 
 
     @options = []
     @options << FieldOption.new("^", "NA")

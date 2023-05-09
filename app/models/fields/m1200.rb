@@ -5,7 +5,13 @@ class M1200
     @name = "Skin and Ulcer/Injury Treatments (Check all that apply) (M1200)"
     @field_type = CHECKBOX
     @node = "M1200" 
+  end
 
+  def set_values_for_type(klass)
+    return "^"
+  end
+
+  def set_options_for_type(klass)
     @options = []
     @options << FieldOption.new("0", key: "M1200A")
     @options << FieldOption.new("1", "Pressure reducing device for chair (M1200a)", key: "M1200A")
@@ -25,10 +31,6 @@ class M1200
     @options << FieldOption.new("1", "Applications of ointments/medications other than to feet (M1200h)", key: "M1200H")
     @options << FieldOption.new("0", key: "M1200I")
     @options << FieldOption.new("1", "Application of dressings to feet (with or without topical medications) (M1200i)", key: "M1200I")
-  end
-
-  def set_values_for_type(klass)
-    return "^"
   end
   
 end

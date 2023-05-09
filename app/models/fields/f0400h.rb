@@ -17,7 +17,7 @@ class F0400h
   end
 
   def set_values_for_type(klass)
-    return "^"
+    return "2"
   end
 
 end

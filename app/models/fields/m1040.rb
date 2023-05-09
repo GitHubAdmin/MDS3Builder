@@ -5,7 +5,13 @@ class M1040
     @name = "Other Ulcers, Wounds & Skin Problems (Check all that apply) (M1040)"
     @field_type = CHECKBOX
     @node = "M1040" 
+  end
 
+  def set_values_for_type(klass)
+    return "0"
+  end
+  
+  def set_options_for_type(klass)
     @options = []
     @options << FieldOption.new("0", key: "M1040A")
     @options << FieldOption.new("1", "Foot Problem: Infection of the foot (e.g., cellulitis, purulent drainage) (M1040a)", key: "M1040A")
@@ -23,10 +29,6 @@ class M1040
     @options << FieldOption.new("1", "Other Problems: Skin tear(s) (M1040g)", key: "M1040G")
     @options << FieldOption.new("0", key: "M1040H")
     @options << FieldOption.new("1", "Other Problems: Moisture Associated Skin Damage (MASD) (e.g., incontinence-associated dermatitis [IAD], perspiration, drainage) (M1040h)", key: "M1040H")
-  end
-
-  def set_values_for_type(klass)
-    return "0"
   end
   
 end

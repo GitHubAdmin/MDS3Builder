@@ -5,7 +5,13 @@ class I4200_I5500
     @name = "Neurological: Active Diagnoses in the last 7 days (Check all that apply) (I4200 - I5500)"
     @field_type = CHECKBOX
     @node = "I4200_I5500"
+  end
 
+  def set_values_for_type(klass)
+    return "0"
+  end
+
+  def set_options_for_type(klass)
     @options = []
     @options << FieldOption.new("0", key: "I4200")
     @options << FieldOption.new("1", "Alzheimer’s Disease (I4200)", key: "I4200")
@@ -31,15 +37,11 @@ class I4200_I5500
     @options << FieldOption.new("1", "Parkinson's Disease (I5300)", key: "I5300")
     @options << FieldOption.new("0", key: "I5350")
     @options << FieldOption.new("1", "Tourette's Syndrome (I5350)", key: "I5350")
-    @options << FieldOption.new("0", key: "I5450")
-    @options << FieldOption.new("1", "Seizure Disorder or Epilepsy (I5450)", key: "I5450")
+    @options << FieldOption.new("0", key: "I5400")
+    @options << FieldOption.new("1", "Seizure Disorder or Epilepsy (I5400)", key: "I5400")
     @options << FieldOption.new("0", key: "I5500")
     @options << FieldOption.new("1", "Traumatic Brain Injury (TBI) (I5500)", key: "I5500")
-
   end
 
-  def set_values_for_type(klass)
-    return "0"
-  end
 
 end

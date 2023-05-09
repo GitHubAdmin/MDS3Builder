@@ -1,26 +1,17 @@
 class A1110a
-  attr_reader :options, :name, :field_type, :node 
+  attr_reader :options, :name, :field_type, :node
 
   def initialize
-    @name = "Language: Does the resident need or want an interpreter to communicate with a doctor or health care staff? (A1110a)"
-    @field_type = DROPDOWN
+    @name = "Language: Preferred language (A1110a)"
+    @field_type = TEXT
     @node = "A1110A" 
 
     @options = []
-    @options << FieldOption.new("^", "NA")
-    @options << FieldOption.new("0", "No")
-    @options << FieldOption.new("1", "Yes")
-    @options << FieldOption.new("9", "Unable to Determine")
+    @options << FieldOption.new("")
   end
 
   def set_values_for_type(klass)
-    case klass
-    when "CorrectionOfDeath" then return "^"
-    when "CorrectionOfEntry" then return "^"
-    when "MdsDeath" then return "^" 
-    when "MdsEntry" then return "^"
-    else return "0"
-    end
+    return "^"
   end
 
 end

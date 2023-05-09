@@ -7,7 +7,7 @@ class MdsDeath < Assessment
   end
 
   def fields
-    super + %w( A2105 A2300 X0600h_title)
+    super + %w( A2105 )
   end
 
 end

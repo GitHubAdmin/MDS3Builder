@@ -2,9 +2,9 @@ class H0600
   attr_reader :options, :name, :field_type, :node
 
   def initialize
-    @name = "Bowel Patterns: Consitpation present? (H0600)"
+    @name = "Bowel Patterns: Constipation present? (H0600)"
     @field_type = DROPDOWN
-    @node = "H0100D"
+    @node = "H0600"
 
     @options = []
     @options << FieldOption.new("^", "NA")

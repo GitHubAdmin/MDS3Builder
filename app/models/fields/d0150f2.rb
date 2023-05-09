@@ -4,7 +4,7 @@ class D0150f2
   def initialize
     @name = "Resident Mood Interview: Over last two weeks, how often has resident reported feeling bad about themself - or that they are a failure or have let self or family down? (D0150f2)"
     @field_type = DROPDOWN
-    @node = "D0150f2" 
+    @node = "D0150F2" 
 
     @options = []
     @options << FieldOption.new("^", "NA")

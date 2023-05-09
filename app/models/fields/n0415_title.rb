@@ -1,10 +1,11 @@
-class N0415
-  attr_reader :options, :name, :field_type, :node
+class N0415_title
+  attr_reader :title, :options, :name, :field_type, :node
 
   def initialize
+    @title = "Section N: Medications"
     @name = "High-Risk Drug Classes: Use and Indication (Check if the resident is taking any medications by pharmacological classifcation, not how it is used, during the last 7 days or since admission/entry or reentry if less than 7 days) (N0415)"
     @field_type = CHECKBOX
-    @node = "N0415" 
+    @node = "N0415_title" 
   end
 
   def set_values_for_type(klass)
