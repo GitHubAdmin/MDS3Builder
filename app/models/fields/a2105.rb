@@ -25,7 +25,15 @@ class A2105
   end
 
   def set_values_for_type(klass)
-    return "^"
+    case klass
+    when "CorrectionOfDeath" then return "13"
+    when "CorrectionOfDischargeRa" then return "04"
+    when "CorrectionOfDischargeRna" then return "04"
+    when "MdsDeath" then return "13" 
+    when "MdsDischargeRa" then return "04" 
+    when "MdsDischargeRna" then return "04"
+    else return "^"
+    end
   end
 
 end
