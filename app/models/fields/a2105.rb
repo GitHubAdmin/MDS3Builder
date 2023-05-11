@@ -7,6 +7,7 @@ class A2105
     @node = "A2105" 
 
     @options = []
+    @options << FieldOption.new("^", "NA")
     @options << FieldOption.new("01", "Home/Community")
     @options << FieldOption.new("02", "Nursing Home (long-term care facility)")
     @options << FieldOption.new("03", "Skilled Nursing Facility (SNF, swing beds)")
@@ -24,7 +25,7 @@ class A2105
   end
 
   def set_values_for_type(klass)
-    return "01"
+    return "^"
   end
 
 end
