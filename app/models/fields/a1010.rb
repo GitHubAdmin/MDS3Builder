@@ -5,7 +5,7 @@ class A1010
     @name = "Race: What is the resident's race? (Check all that apply) (A1010)"
     @field_type = CHECKBOX
     @node = "A1010" 
-end
+  end
 
   def set_values_for_type(klass)
     return "0"

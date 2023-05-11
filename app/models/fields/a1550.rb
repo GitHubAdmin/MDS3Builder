@@ -1,5 +1,4 @@
 class A1550
-  include AssessmentHelper
   attr_reader :title, :options, :name, :field_type, :node 
 
   def initialize

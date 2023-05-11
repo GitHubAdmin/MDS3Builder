@@ -6,6 +6,14 @@ include AssessmentHelper
     @name = "Nutritional Approaches: Therapeutic diet (e.g., low salt, diabetic, low cholesterol) (Check all of the following nutritional approaches that apply) (K0520d1, K0520d3, K0520d4)"
     @field_type = CHECKBOX
     @node = "K0520D1_K0520D4"
+
+    @options = []
+    @options << FieldOption.new("0", key: "K0520D1", excluded_assmnt_types: ["NPE","ND"])
+    @options << FieldOption.new("1", "On Admission (K0520d1)", key: "K0520D1", excluded_assmnt_types: ["NPE","ND"])
+    @options << FieldOption.new("0", key: "K0520D3", excluded_assmnt_types: ["NPE"])
+    @options << FieldOption.new("1", "While a Resident (K0520d3)", key: "K0520D3", excluded_assmnt_types: ["NPE"])
+    @options << FieldOption.new("0", key: "K0520D4")
+    @options << FieldOption.new("1", "At Discharge (K0520d4)", key: "K0520D4")
   end
 
   def set_values_for_type(klass)
@@ -14,15 +22,7 @@ include AssessmentHelper
 
   def set_options_for_type(klass)
     assmnt_type = assessment_type(klass)
-    @options = []
-    if assmnt_type != "NPE"
-      @options << FieldOption.new("0", key: "K0520D1") if assmnt_type != "ND"
-      @options << FieldOption.new("1", "On Admission (K0520d1)", key: "K0520D1") if assmnt_type != "ND"
-      @options << FieldOption.new("0", key: "K0520D3")
-      @options << FieldOption.new("1", "While a Resident (K0520d3)", key: "K0520D3")
-    end
-    @options << FieldOption.new("0", key: "K0520D4")
-    @options << FieldOption.new("1", "At Discharge (K0520d4)", key: "K0520D4")
+    @options = @options.select{ |o| !o.excluded_assmnt_types.include?(assmnt_type) }
   end
 
 end

@@ -7,7 +7,6 @@ class GG0110
     @node = "GG0110" 
   end
 
-
   def set_values_for_type(klass)
     return "0"
   end

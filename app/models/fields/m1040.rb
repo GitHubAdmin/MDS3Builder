@@ -6,14 +6,7 @@ include AssessmentHelper
     @name = "Other Ulcers, Wounds & Skin Problems (Check all that apply) (M1040)"
     @field_type = CHECKBOX
     @node = "M1040" 
-  end
 
-  def set_values_for_type(klass)
-    return "0"
-  end
-  
-  def set_options_for_type(klass)
-    assmnt_type = assessment_type(klass)
     @options = []
     @options << FieldOption.new("0", key: "M1040A")
     @options << FieldOption.new("1", "Foot Problem: Infection of the foot (e.g., cellulitis, purulent drainage) (M1040a)", key: "M1040A")
@@ -27,12 +20,19 @@ include AssessmentHelper
     @options << FieldOption.new("1", "Other Problems: Surgical wound(s) (M1040e)", key: "M1040E")
     @options << FieldOption.new("0", key: "M1040F")
     @options << FieldOption.new("1", "Other Problems: Burn(s) (second or third degree) (M1040f)", key: "M1040F")
-    if assmnt_type != "IPA"
-      @options << FieldOption.new("0", key: "M1040G") 
-      @options << FieldOption.new("1", "Other Problems: Skin tear(s) (M1040g)", key: "M1040G")
-      @options << FieldOption.new("0", key: "M1040H")
-      @options << FieldOption.new("1", "Other Problems: Moisture Associated Skin Damage (MASD) (e.g., incontinence-associated dermatitis [IAD], perspiration, drainage) (M1040h)", key: "M1040H")
-    end
+    @options << FieldOption.new("0", key: "M1040G", excluded_assmnt_types: ["IPA"]) 
+    @options << FieldOption.new("1", "Other Problems: Skin tear(s) (M1040g)", key: "M1040G", excluded_assmnt_types: ["IPA"])
+    @options << FieldOption.new("0", key: "M1040H", excluded_assmnt_types: ["IPA"])
+    @options << FieldOption.new("1", "Other Problems: Moisture Associated Skin Damage (MASD) (e.g., incontinence-associated dermatitis [IAD], perspiration, drainage) (M1040h)", key: "M1040H", excluded_assmnt_types: ["IPA"])
+  end
+
+  def set_values_for_type(klass)
+    return "0"
+  end
+  
+  def set_options_for_type(klass)
+    assmnt_type = assessment_type(klass)
+    @options = @options.select{ |o| !o.excluded_assmnt_types.include?(assmnt_type) }
   end
   
 end
