@@ -8,7 +8,7 @@ class CorrectionOfInterimPayment < Assessment
 
   def fields
     %w(
-        ItmSbstCd StateCd FacId 
+        ItmSbstCd ItmSetVrsnCd StateCd FacId 
               
         A0050 A0100b A0200 A0300a A0310a A0310b A0310e A0310f A0310g A0500a 
         A0500b A0500c A0600a A0600b A0800 A0900 A1000a A1000b A1000c A1000d A1000e A1000f A1100a A1100b A1200
