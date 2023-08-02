@@ -4,7 +4,7 @@ class J0500b
   def initialize
     @name = "Pain Effect on Function: Ask resident: 'Over the past 5 days, have you limited your day-to-day activities because of pain?' (J0500b)"
     @field_type = DROPDOWN
-    @node = "J0500a"
+    @node = "J0500B"
     
     @options = []
     @options << FieldOption.new("^", "NA")
