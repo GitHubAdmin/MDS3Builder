@@ -9,7 +9,8 @@ class H0200b
     @options = []
     @options << FieldOption.new("^", "NA")
     @options << FieldOption.new("0", "No improvement")
-    @options << FieldOption.new("1", "Completely dry (continent)")
+    @options << FieldOption.new("1", "Decreased wetness")
+    @options << FieldOption.new("2", "Completely dry (continent)")
     @options << FieldOption.new("9", "Unable to determine or trial in progress")
   end
 
