@@ -2,8 +2,8 @@ class AssessmentsController < ApplicationController
 
   def new
     @assessment = get_correct_assessment_type
-    ApplyQpParameterContext.call(@assessment, params[:qp_name], params[:pos_or_neg], params[:resident], params[:ssn], params[:type])
-    @@filename = ApplyFileNameContext.call(@assessment, params[:type], params[:qp_name], params[:resident])
+    ApplyTestCaseParameterContext.call(@assessment, params[:res_first], params[:res_last], params[:ssn], params[:test_case], params[:level] || nil)
+    @@filename = ApplyFileNameContext.call(@assessment, params[:test_case], params[:level] || nil, params[:res_first])
   end
 
   def create

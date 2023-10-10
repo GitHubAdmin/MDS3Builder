@@ -1,19 +1,19 @@
 class ApplyFileNameContext
-  attr_accessor :assessment, :type, :qp_name, :resident
+  attr_accessor :assessment, :case_name, :level, :resident
 
-  def self.call(assessment, type, qp_name, resident)
-    ApplyFileNameContext.new(assessment, type, qp_name, resident).call
+  def self.call(assessment, case_name, level, resident)
+    ApplyFileNameContext.new(assessment, case_name, level, resident).call
   end
 
-  def initialize(assessment, type, qp_name, resident)
-    @assessment, @type,@qp_name, @resident = assessment, type, qp_name, resident
+  def initialize(assessment, case_name, level, resident)
+    @assessment, @case_name, @level, @resident, = assessment, case_name, level, resident
   end
 
   def call
-    if @qp_name.present?
-      "#{@qp_name}_#{@resident}_#{@type}.xml"
+    if @level
+      "#{@level}_#{@resident}_#{@case_name}.xml"
     else
-      "#{@type}.xml"
+      "#{@case_name}.xml"
     end
   end
 

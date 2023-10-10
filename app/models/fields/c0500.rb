@@ -1,6 +1,7 @@
 class C0500
   attr_reader :options, :name, :field_type, :node
-
+  attr_accessor :value
+  
   def initialize
     @name = "BIMS Summary Score: Add scores for questions C0200-C0400 and fill in total score (00-15) (C0500)"
     @field_type = TEXT
