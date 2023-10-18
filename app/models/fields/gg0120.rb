@@ -1,5 +1,6 @@
 class GG0120
   attr_reader :options, :name, :field_type, :node
+  attr_accessor :options
 
   def initialize
     @name = "Mobility Devices - check all that were normally used in the last 7 days (GG0120)"

@@ -12,7 +12,6 @@
 # H0300
 # H0400
 
-
 module TestCases::Barthel
 
   def apply_values(level)
@@ -26,31 +25,23 @@ module TestCases::Barthel
 
   def set_barthel_low(fields)
     fields.each do |field|
-      if field != "GG0120C"
-        klass = klasses.detect{|x| x.node == field }
-        field_option = klass.options.detect{|x| x.value == "01" || x.value == "1"}
-        field_option.selected = true
-      elsif field == "GG0120C"
+      if field == "GG0120C"
         klass = klasses.detect{|x| x.node == "GG0120"}
-        klass.set_options_for_type('MdsAdmission')
+        klass.set_options_for_type("MdsAdmission")
         option = klass.options.detect{|o| o.key == field && o.value == "1"}
-        option.selected = true
+      else
+        klass = klasses.detect{|x| x.node == field}
+        option = klass.options.detect{|x| x.value == "01" || x.value == "1"}
       end
+      option.selected = true
     end
   end
 
   def set_barthel_high(fields)
     fields.each do |field|
-      if field != "GG0120C"
-        klass = klasses.detect{|x| x.node == field }
-        field_option = klass.options.detect{|x| x.value == "06" || x.value == "0"}
-        field_option.selected = true
-      elsif field == "GG0120C"
-        klass = klasses.detect{|x| x.node == "GG0120"}
-        klass.set_options_for_type('MdsAdmission')
-        option = klass.options.detect{|o| o.key == field && o.value == "0"}
-        option.selected = true
-      end
+      next if field == "GG0120C"
+      klass = klasses.detect{|x| x.node == field }
+      field_option = klass.options.detect{|x| x.value == "06" || x.value == "0"}.selected = true 
     end
   end
 

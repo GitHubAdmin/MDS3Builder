@@ -1,21 +1,21 @@
 <form action="/assessments/" method="post">
   <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>"/>
-  <h2><%= "#{@assessment.title}" %></h2>
+  <h2><%= @assessment.title %></h2>
   <div align="center">
     <input value="Export XML" class="btn default btn-submit" type="submit">
   </div>
   <% @assessment.klasses.each do |klass| %>
     <% default = klass.set_values_for_type("#{@assessment.class}") %>
-      <h3><%= if defined? klass.title then "#{klass.title}" end %></h3><br>
+      <h3><%= if defined? klass.title then klass.title end %></h3><br>
       <strong><%=klass.name%></strong>
       <% if klass.field_type == DROPDOWN %>
         <br>
         <select name="assessment[<%=klass.node%>]">
         <% have_selected = klass.options.detect{|o| o.selected } %>
-          <% klass.options.each do |option| %>
-            <% if option.selected || (!have_selected && option.value == default) %>
-              <option id="<%=klass.node+"_"+option.value%>" value="<%=option.value%>" selected="selected" ><%="#{option.value} - #{option.description}" %></option>
-            <% else %>
+        <% klass.options.each do |option| %>
+          <% if option.selected || (!have_selected && option.value == default) %>
+            <option id="<%=klass.node+"_"+option.value%>" value="<%=option.value%>" selected="selected" ><%="#{option.value} - #{option.description}" %></option>
+          <% else %>
               <option id="<%=klass.node+"_"+option.value%>" value="<%=option.value%>" ><%="#{option.value} - #{option.description}"%></option>
             <% end %>
           <% end %>
@@ -30,11 +30,12 @@
           <% end %>
         </div>
       <% elsif klass.field_type == CHECKBOX %>
-        <% options = klass.set_options_for_type("#{@assessment.class}") %>
+        <% options = klass.options.present? ? klass.options : klass.set_options_for_type("{@assessment.class}") %>
         <div class="checkbox">
           <% klass.options.each do |option| %>
             <label for="<%=option.key+"_"+option.value%>"><%=option.description%>
-              <input class="search-query" type="<%=input_type(klass.field_type)%>" name="assessment[<%=option.key%>]" value="<%=option.value%>" id="<%=option.key+"_"+option.value%>" <%= 'checked' if option.selected || (!have_selected && option.value == default) %>/>
+              <input class="search-query" type="<%=input_type(klass.field_type)%>" name="assessment[<%=option.key%>]" value="<%=option.value%>" id="<%=option.key+"_"+option.value%>"
+              <%= 'checked' if option.selected  || (!have_selected && option.value == default) %>/>
             </label>
           <% end %>
         </div>

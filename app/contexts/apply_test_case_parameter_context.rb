@@ -15,7 +15,9 @@ class ApplyTestCaseParameterContext
 
   def call
     return unless @test_case.present? 
-    @assessment.set_all_to_nil
+    if @test_case != "HighRisk" 
+      @assessment.set_all_to_nil 
+    end
     @assessment.apply_resident_info(@res_first, @res_last, @ssn)
     @level.present? ? @assessment.apply_values(@level) : @assessment.apply_values
   end
