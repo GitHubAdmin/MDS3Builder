@@ -19,7 +19,8 @@ module TestCases::AttributeSetter
               "O0250A", "O0300A", "O0400A4", "O0400B4", "O0400C4", "O0400D2", "O0400E2", "O0400F2", "O0420", "O0500A", "O0500B", "O0500C", "O0500D", "O0500E", "O0500F", "O0500G", "O0500H", "O0500I", "O0500J",
               "P0100A", "P0100B", "P0100C", "P0100D", "P0100E", "P0100F", "P0100G", "P0100H", "P0200A", "P0200B", "P0200C", "P0200D", "P0200E", "P0200F"]
     field_array.each do |field|
-      klass = klasses.detect{|x| x.node == field}
+      klass = klasses.detect{|x| x.node == field} 
+      next if !klass
       field_option = klass.options.detect{|x| x.value == "^"}
       field_option.selected = true
     end
@@ -32,6 +33,7 @@ module TestCases::AttributeSetter
                     
     field_array.each do |field|
       klass = klasses.detect{|x| x.node == field}
+      next if !klass
   	  klass.options.each{|x| x.value = "^"; x.selected = true} 
     end  
   end
