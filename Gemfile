@@ -23,7 +23,7 @@ end
 
 group :development, :test do
   gem 'sqlite3', '1.3.10'
-  gem 'rspec-rails', '2.13.1'
+  gem 'rspec-rails', '8.0.0'
 end
 
 group :doc do
